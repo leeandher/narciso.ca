@@ -7,10 +7,12 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import { createGlobalStyle } from "styled-components"
 import "../styles/normalize.css"
+
+import Header from "./Header"
+import Nav from "./Nav"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -19,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children }) => {
   return (
     <>
+      <Header />
+      <Nav />
       <GlobalStyle />
       <main>{children}</main>
     </>
